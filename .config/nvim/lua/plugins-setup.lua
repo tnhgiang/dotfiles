@@ -13,7 +13,7 @@ local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
-vim.cmd([[ 
+vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
@@ -102,7 +102,14 @@ return packer.startup(function(use)
 	-- for autocompletion
 	use("hrsh7th/cmp-nvim-lsp")
 	-- enhanced lsp uis
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		requires = {
+		  { "nvim-tree/nvim-web-devicons" },
+		  { "nvim-treesitter/nvim-treesitter" },
+		},
+	  }) -- enhanced lsp uis
 	-- additional functionality for typescript server (e.g. rename file & update imports)
 	use("jose-elias-alvarez/typescript.nvim")
 	-- vs-code like icons for autocompletion
