@@ -109,7 +109,7 @@ return packer.startup(function(use)
 		  { "nvim-tree/nvim-web-devicons" },
 		  { "nvim-treesitter/nvim-treesitter" },
 		},
-	  }) -- enhanced lsp uis
+	  })
 	-- additional functionality for typescript server (e.g. rename file & update imports)
 	use("jose-elias-alvarez/typescript.nvim")
 	-- vs-code like icons for autocompletion
