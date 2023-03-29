@@ -22,11 +22,17 @@ mason.setup()
 mason_lspconfig.setup({
   -- list of servers for mason to install
   ensure_installed = {
+    -- js, ts, html, css
     "tsserver",
     "html",
     "cssls",
-    "lua_ls",
     "emmet_ls",
+
+    -- python
+    "pyright",
+
+    -- lua
+    "lua_ls",
   },
   -- auto-install configured servers (with lspconfig)
   automatic_installation = true, -- not the same as ensure_installed
@@ -35,9 +41,17 @@ mason_lspconfig.setup({
 mason_null_ls.setup({
   -- list of formatters & linters for mason to install
   ensure_installed = {
+    -- js, ts, html, css
     "prettier", -- ts/js formatter
-    "stylua", -- lua formatter
     "eslint_d", -- ts/js linter
+
+    -- python
+    "black", -- python formatter
+    "isort", -- python formatter
+    "flake8", -- python linter
+
+    -- lua
+    "stylua", -- lua formatter
   },
   -- auto-install configured formatters & linters (with null-ls)
   automatic_installation = true,
