@@ -16,15 +16,39 @@ null_ls.setup({
   -- setup formatters & linters
   sources = {
     --  to disable file types use
-    --  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
-    formatting.prettier, -- js/ts formatter
-    formatting.stylua, -- lua formatter
-    diagnostics.eslint_d.with({ -- js/ts linter
+    -- =================JS, TS, HTML, CSS=================
+    --  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
+    -- Formatter
+    formatting.prettier,
+
+    -- Linter
+    diagnostics.eslint_d.with({
       -- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
       condition = function(utils)
         return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
       end,
     }),
+
+    -- =================Python=================
+    -- Formatter
+    formatting.black,
+    formatting.isort.with({ extra_args = { extra_args = { "--profile", "black" } } }),
+
+    -- Linter
+    diagnostics.flake8.with({
+      extra_args = {
+        "--max-line-length",
+        "88",
+        "--select",
+        "C,E,F,W,B,B950",
+        "--extend-ignore",
+        "E203,E501,W503",
+      },
+    }),
+
+    -- =================Lua=================
+    -- Formatter
+    formatting.stylua,
   },
   -- configure format on save
   on_attach = function(current_client, bufnr)
