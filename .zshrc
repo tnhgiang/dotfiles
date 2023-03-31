@@ -106,7 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias nvi="nvim"
+alias nv="nvim"
+
+alias aleads="cd /Users/tnhgiang/Code/Aleads"
+alias personal="cd /Users/tnhgiang/Code/Personal"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
