@@ -32,7 +32,7 @@ null_ls.setup({
     -- =================Python=================
     -- Formatter
     formatting.black,
-    formatting.isort.with({ extra_args = { extra_args = { "--profile", "black" } } }),
+    formatting.isort.with({ extra_args = { "--profile", "black" } }),
 
     -- Linter
     diagnostics.flake8.with({
