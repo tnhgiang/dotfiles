@@ -138,6 +138,9 @@ return packer.startup(function(use)
 	-- rainbow parenttheses
 	use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" })
 
+	-- indentation guides to all lines
+	use("lukas-reineke/indent-blankline.nvim")
+
 	-- git integration
 	-- show line modifications on left hand side
 	use("lewis6991/gitsigns.nvim")
