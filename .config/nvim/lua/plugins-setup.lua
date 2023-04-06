@@ -114,6 +114,8 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/typescript.nvim")
 	-- vs-code like icons for autocompletion
 	use("onsails/lspkind.nvim")
+	-- show nvim-lsp progress
+	use("j-hui/fidget.nvim")
 
 	-- formatting & linting
 	-- configure formatters & linters
