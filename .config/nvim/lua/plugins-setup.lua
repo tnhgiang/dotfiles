@@ -143,6 +143,9 @@ return packer.startup(function(use)
 	-- indentation guides to all lines
 	use("lukas-reineke/indent-blankline.nvim")
 
+	-- automatically highlight other uses of the word
+	use("RRethy/vim-illuminate")
+
 	-- vs-code-like tab
 	-- aesthetics tab
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
