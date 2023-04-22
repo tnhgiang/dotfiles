@@ -57,7 +57,7 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
--- nvim buffer delete
+-- nvim buffer management
 keymap.set("n", "<leader>w", "<cmd>BufDel<CR>") -- Close the current buffer
 keymap.set("n", "<leader>W", "<cmd>BufDel!<CR>") -- Close the current buffer without changes
 keymap.set("n", "<leader>q", "<cmd>BufDelAll<CR>") -- Close all visible buffers
