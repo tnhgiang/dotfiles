@@ -143,6 +143,12 @@ return packer.startup(function(use)
 	-- indentation guides to all lines
 	use("lukas-reineke/indent-blankline.nvim")
 
+	-- vs-code-like tab
+	-- aesthetics tab
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+	-- buffer management
+	use({ "ojroques/nvim-bufdel" })
+
 	-- git integration
 	-- show line modifications on left hand side
 	use("lewis6991/gitsigns.nvim")
