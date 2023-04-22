@@ -24,10 +24,10 @@ keymap.set("n", "<leader>-", "<C-x>") -- decrement
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
+keymap.set("n", "<leader>sw", ":close<CR>") -- close current split window
 
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+keymap.set("n", "<leader>tt", ":tabnew<CR>") -- open new tab
+keymap.set("n", "<leader>tw", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
@@ -56,3 +56,13 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- nvim buffer management
+keymap.set("n", "<leader>w", "<cmd>BufDel<CR>") -- Close the current buffer
+keymap.set("n", "<leader>W", "<cmd>BufDel!<CR>") -- Close the current buffer without changes
+keymap.set("n", "<leader>q", "<cmd>BufDelAll<CR>") -- Close all visible buffers
+keymap.set("n", "<leader>qo", "<cmd>BufDelOthers<CR>") -- Close all visible buffers
+keymap.set("n", "<leader>qr", "<cmd>BufferLineCloseRight<CR>") -- Close all visible buffers to the right of the current buffer
+keymap.set("n", "<leader>ql", "<cmd>BufferLineCloseLeft<CR>") -- Close all visible buffers to the left of the current buffer
+keymap.set("n", "<tab>", "<cmd>BufferLineCycleNext<CR>") -- Navigate buffer
+keymap.set("n", "<S-tab>", "<cmd>BufferLineCyclePrev<CR>") -- Navigate buffer
