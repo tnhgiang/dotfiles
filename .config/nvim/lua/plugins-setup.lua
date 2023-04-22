@@ -114,6 +114,8 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/typescript.nvim")
 	-- vs-code like icons for autocompletion
 	use("onsails/lspkind.nvim")
+	-- show nvim-lsp progress
+	use("j-hui/fidget.nvim")
 
 	-- formatting & linting
 	-- configure formatters & linters
@@ -137,6 +139,9 @@ return packer.startup(function(use)
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
 	-- rainbow parenttheses
 	use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" })
+
+	-- indentation guides to all lines
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- git integration
 	-- show line modifications on left hand side
