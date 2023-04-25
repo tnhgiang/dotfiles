@@ -39,7 +39,7 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true }) -- toggle file explorer
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -66,3 +66,6 @@ keymap.set("n", "<leader>qr", "<cmd>BufferLineCloseRight<CR>") -- Close all visi
 keymap.set("n", "<leader>ql", "<cmd>BufferLineCloseLeft<CR>") -- Close all visible buffers to the left of the current buffer
 keymap.set("n", "<tab>", "<cmd>BufferLineCycleNext<CR>") -- Navigate buffer
 keymap.set("n", "<S-tab>", "<cmd>BufferLineCyclePrev<CR>") -- Navigate buffer
+
+-- rename
+keymap.set("n", "<leader>rn", ":IncRename ")
