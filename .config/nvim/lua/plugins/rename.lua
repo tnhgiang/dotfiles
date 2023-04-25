@@ -1,10 +1,10 @@
 -- import inc_rename plugin safely
 local status, rename = pcall(require, "inc_rename")
 if not status then
-	return
+  return
 end
 
 -- configure/enable inc_rename
 rename.setup({
-	cmd_name = "",
+  cmd_name = "",
 })
