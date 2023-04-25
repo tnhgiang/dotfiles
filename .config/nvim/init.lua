@@ -1,6 +1,7 @@
 require("plugins-setup")
 require("core.options")
 require("core.keymaps")
+require("core.autocmds")
 require("core.colorscheme")
 require("plugins.comment")
 require("plugins.todo-comment")
