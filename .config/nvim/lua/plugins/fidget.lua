@@ -4,5 +4,9 @@ if not status then
   return
 end
 
--- configure/enable gitsigns
-fidget.setup()
+-- configure/enable fidget
+fidget.setup({
+  text = {
+    spinner = "dots",
+  },
+})
