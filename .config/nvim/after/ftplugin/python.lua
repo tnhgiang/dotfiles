@@ -14,5 +14,5 @@ g.pyindent_close_paren = "-shiftwidth()"
 -- Abbreviations
 api.nvim_create_autocmd("BufEnter", {
   desc = "Abbreviations for python files only",
-  command = [[iabbrev <buffer> db@ import ipdb; ipdb.set_trace # fmt: skip]],
+  command = [[iabbrev <buffer> db@ import ipdb; ipdb.set_trace()  # fmt: skip]],
 })
